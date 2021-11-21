@@ -4,7 +4,7 @@ const { MessageEmbed } = require('discord.js')
 module.exports = {
      data: new SlashCommandBuilder()
              .setName('ping')
-             .setDescription("Displays Avoc's current Ping."),
+             .setDescription("Displays Bot's current Ping."),
   async execute(interaction, client) {
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     var d = new Date()
