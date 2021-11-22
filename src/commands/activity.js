@@ -34,7 +34,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "755600276941176913",
                         target_type: 2,
@@ -55,7 +55,7 @@ module.exports = {
                         .setFields([
                             {
                                 name: "YouTube Together",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
@@ -67,7 +67,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "755827207812677713",
                         target_type: 2,
@@ -88,7 +88,7 @@ module.exports = {
                         .setFields([
                             {
                                 name: "Poker Night",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
@@ -100,7 +100,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "773336526917861400",
                         target_type: 2,
@@ -121,7 +121,7 @@ module.exports = {
                         .setFields([
                             {
                                 name: "Betrayal.io",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
@@ -133,7 +133,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "814288819477020702",
                         target_type: 2,
@@ -154,7 +154,7 @@ module.exports = {
                         .setFields([
                             {
                                 name: "Fishington.io",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
@@ -166,7 +166,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "832012774040141894",
                         target_type: 2,
@@ -187,7 +187,7 @@ module.exports = {
                         .setFields([
                             {
                                 name: "Chess in the Park",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
@@ -199,7 +199,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "878067389634314250",
                         target_type: 2,
@@ -220,7 +220,7 @@ module.exports = {
                         .setFields([
                             {
                                 name: "Doodle Crew",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
@@ -232,7 +232,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "879863976006127627",
                         target_type: 2,
@@ -253,7 +253,7 @@ module.exports = {
                         .setFields([
                             {
                                 name: "Word Snacks",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
@@ -265,7 +265,7 @@ module.exports = {
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
                     method: "POST",
                     body: JSON.stringify({
-                        max_age: 86400,
+                        max_age: 600,
                         max_uses: 0,
                         target_application_id: "879863686565621790",
                         target_type: 2,
