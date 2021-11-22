@@ -15,8 +15,10 @@ module.exports = {
       .addChoice('Betrayal.io', 'betrayal')
       .addChoice('Fishington.io', 'fishington')
       .addChoice('Chess in the Park', 'chessinthepark')
+      .addChoice('Checkers in the park', 'checkersinthepark')
       .addChoice('Doodle Crew', 'doodlecrew')
       .addChoice('Word Snacks', 'wordsnacks')
+      .addChoice('Awkword', 'awkword')
       .addChoice('Letter Tile', 'lettertile')),
       
       async execute(interaction) {
@@ -201,6 +203,40 @@ module.exports = {
                 })
                 break
             }
+            case "checkersinthepark": {
+
+                fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
+                    method: "POST",
+                    body: JSON.stringify({
+                        max_age: 600,
+                        max_uses: 0,
+                        target_application_id: "832013003968348200",
+                        target_type: 2,
+                        temporary: false,
+                        validate: null
+                    }),
+                    headers: {
+                        "Authorization": `Bot ${token}`,
+                        "Content-Type": "application/json"
+                    }
+                }).then(res=> res.json()).then(invite=> {
+                    if(!invite.code) return interaction.reply(`An error occured, please contact <@${owner}>`)
+                    interaction.reply({embeds: [
+                        new MessageEmbed()
+                        .setColor('#0xe100ff')
+                        .setImage('https://media.discordapp.net/attachments/898953752478908466/907744410031226920/line.png?width=360&height=2')
+                        .setFooter(`${d.toLocaleDateString("en-US", options)}`)
+                        .setFields([
+                            {
+                                name: "Checkers in the Park",
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
+                            }
+                        ])
+                    ]})
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Chess in the Park.`))
+                })
+                break
+            }
             case "doodlecrew": {
 
                 fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
@@ -266,6 +302,40 @@ module.exports = {
                         ])
                     ]})
                     console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Word Snacks.`))
+                })
+                break
+            }
+            case "awkword": {
+
+                fetch(`https://discord.com/api/v9/channels/${pickedchannel.id}/invites`, {
+                    method: "POST",
+                    body: JSON.stringify({
+                        max_age: 600,
+                        max_uses: 0,
+                        target_application_id: "879863881349087252",
+                        target_type: 2,
+                        temporary: false,
+                        validate: null
+                    }),
+                    headers: {
+                        "Authorization": `Bot ${token}`,
+                        "Content-Type": "application/json"
+                    }
+                }).then(res=> res.json()).then(invite=> {
+                    if(!invite.code) return interaction.reply(`An error occured, please contact <@${owner}>`)
+                    interaction.reply({embeds: [
+                        new MessageEmbed()
+                        .setColor('#0xe100ff')
+                        .setImage('https://media.discordapp.net/attachments/898953752478908466/907744410031226920/line.png?width=360&height=2')
+                        .setFooter(`${d.toLocaleDateString("en-US", options)}`)
+                        .setFields([
+                            {
+                                name: "Awkword",
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
+                            }
+                        ])
+                    ]})
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Chess in the Park.`))
                 })
                 break
             }
