@@ -233,7 +233,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Chess in the Park.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Checkers in the Park.`))
                 })
                 break
             }
@@ -335,7 +335,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Chess in the Park.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Awkword.`))
                 })
                 break
             }
