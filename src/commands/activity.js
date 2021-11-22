@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders')
 const { MessageEmbed } = require('discord.js')
 const { owner, token } = require('../config.json')
 const fetch = require('node-fetch')
+const chalk = require('chalk')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -59,6 +60,7 @@ module.exports = {
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created YouTube Together.`))
                 })
                 break
             }
@@ -92,6 +94,7 @@ module.exports = {
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created Poker Night.`))
                 })
                 break
             }
@@ -125,6 +128,7 @@ module.exports = {
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created Betrayal.io`))
                 })
                 break
             }
@@ -158,6 +162,7 @@ module.exports = {
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created Fishington.io`))
                 })
                 break
             }
@@ -191,6 +196,7 @@ module.exports = {
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created Chess in the Park.`))
                 })
                 break
             }
@@ -224,6 +230,7 @@ module.exports = {
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created Doodle Crew.`))
                 })
                 break
             }
@@ -257,6 +264,7 @@ module.exports = {
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created Word Snacks.`))
                 })
                 break
             }
@@ -286,10 +294,11 @@ module.exports = {
                         .setFields([
                             {
                                 name: "Letter Tile",
-                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity.`
+                                value: `Click [here](https://discord.com/invite/${invite.code}) to join activity, link valid for 10 minutes.`
                             }
                         ])
                     ]})
+                    console.log(chalk.magentaBright(`Created Letter Tile.`))
                 })
                 break
             }
