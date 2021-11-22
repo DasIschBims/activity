@@ -21,6 +21,7 @@ module.exports = {
       
       async execute(interaction) {
 
+        var consolelog = {year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'};
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var d = new Date()
 
@@ -60,7 +61,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created YouTube Together.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created YouTube Together.`))
                 })
                 break
             }
@@ -94,7 +95,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created Poker Night.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Poker Night.`))
                 })
                 break
             }
@@ -128,7 +129,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created Betrayal.io`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Betrayal.io`))
                 })
                 break
             }
@@ -162,7 +163,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created Fishington.io`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Fishington.io`))
                 })
                 break
             }
@@ -196,7 +197,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created Chess in the Park.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Chess in the Park.`))
                 })
                 break
             }
@@ -230,7 +231,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created Doodle Crew.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Doodle Crew.`))
                 })
                 break
             }
@@ -264,7 +265,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created Word Snacks.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Word Snacks.`))
                 })
                 break
             }
@@ -298,7 +299,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.magentaBright(`Created Letter Tile.`))
+                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Letter Tile.`))
                 })
                 break
             }
