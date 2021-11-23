@@ -33,7 +33,8 @@ client.on('ready', () => {
         const activitylist = [
             {  type: "LISTENING", message: `slash commands`},
             {  type: "WATCHING", message: `${client.guilds.cache.size} servers`},
-            {  type: "PLAYING", message: `discord activites`}
+            {  type: "PLAYING", message: `discord activites`},
+            {  type: "LISTENING", message: `${client.shard.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} users`}
         ]
 
         state = (state + 1) % activitylist.length;
