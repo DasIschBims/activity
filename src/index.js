@@ -1,6 +1,7 @@
 const DiscordJS = require('discord.js')
 const { Collection } = require('discord.js')
-const { token } = require('./config.json')
+const { MessageEmbed } = require('discord.js')
+const { token, botId } = require('./config.json')
 const chalk = require('chalk')
 
 const fs = require('fs')
@@ -34,7 +35,7 @@ client.on('ready', () => {
             {  type: "LISTENING", message: `slash commands`},
             {  type: "WATCHING", message: `${client.guilds.cache.size} servers`},
             {  type: "PLAYING", message: `discord activites`},
-            {  type: "LISTENING", message: `${client.shard.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} users`}
+            
         ]
 
         state = (state + 1) % activitylist.length;
@@ -43,6 +44,34 @@ client.on('ready', () => {
 	client.user.setActivity(activity.message, { type: activity.type })
     state + 1
     }, 8000);
+})
+
+client.on("messageCreate", message => {
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var d = new Date()
+
+    if (message.author.bot) return false
+
+    if (message.mentions.has(client.user.id)) {
+        message.reply({embeds: [
+            new MessageEmbed()
+            .setTitle('How the bot works')
+            .setColor('#0xe100ff')
+            .setFooter(`${d.toLocaleDateString("en-US", options)}`)
+            .addFields([
+              {
+                name: 'Command usage',
+                value: "I'm using discord's slash commands, just type ``/`` and pick my commands from the list ;)",
+                inline: true
+              },
+              {
+                name: 'Detailed help',
+                value: "Type ``/help`` and pick the bot's command to get more detailed help.",
+                inline: true
+              }
+            ])
+          ], ephemeral: true})
+    }
 })
 
 client.on('interactionCreate', async interaction => {
