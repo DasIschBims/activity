@@ -10,6 +10,9 @@ Simply type /activities, pick a voice channel and select one of the activities y
 
 
 ### Host yourself?
+- Download latest release.
+- Make sure [Node.js](https://nodejs.org/en/) is installed.
+- Run ``npm install`` to install all required dependencies.
 - Add a config.json in the root folder.
 - Enter the following information in it:
 
