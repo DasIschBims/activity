@@ -18,6 +18,7 @@
     "chalk": "^4.1.2",
     "discord-api-types": "^0.24.0",
     "discord.js": "^13.3.1",
+    "log-to-file": "^3.0.0",
     "node-fetch": "2.0.0",
     "nodemon": "^2.0.14"
   },

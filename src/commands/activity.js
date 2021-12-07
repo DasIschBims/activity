@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders')
 const { MessageEmbed } = require('discord.js')
 const { owner, token } = require('../config.json')
 const fetch = require('node-fetch')
+const log = require('log-to-file')
 const chalk = require('chalk')
 
 module.exports = {
@@ -63,7 +64,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created YouTube Together.`))
+                    log('Created YouTube Together.', 'activity-log.txt')
                 })
                 break
             }
@@ -97,7 +98,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Poker Night.`))
+                    log('Created Poker Night.', 'activity-log.txt')
                 })
                 break
             }
@@ -131,7 +132,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Betrayal.io`))
+                    log('Created Betrayal.io.', 'activity-log.txt')
                 })
                 break
             }
@@ -165,7 +166,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Fishington.io`))
+                    log('Created Fishington.io.', 'activity-log.txt')
                 })
                 break
             }
@@ -199,7 +200,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Chess in the Park.`))
+                    log('Created Chess in the Park.', 'activity-log.txt')
                 })
                 break
             }
@@ -233,7 +234,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Checkers in the Park.`))
+                    log('Created Checkers in the Park.', 'activity-log.txt')
                 })
                 break
             }
@@ -267,7 +268,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Doodle Crew.`))
+                    log('Created Doodle Crew.', 'activity-log.txt')
                 })
                 break
             }
@@ -301,7 +302,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Word Snacks.`))
+                    log('Created Word Snacks.', 'activity-log.txt')
                 })
                 break
             }
@@ -335,7 +336,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Awkword.`))
+                    log('Created Awkword.', 'activity-log.txt')
                 })
                 break
             }
@@ -369,7 +370,7 @@ module.exports = {
                             }
                         ])
                     ]})
-                    console.log(chalk.yellowBright.underline(`${new Date().toLocaleDateString("de-DE", consolelog)} | Created Letter Tile.`))
+                    log('Created Letter Tile.', 'activity-log.txt')
                 })
                 break
             }
