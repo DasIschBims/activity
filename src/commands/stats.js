@@ -18,7 +18,6 @@ module.exports = {
     seconds = (seconds < 10) ? + seconds : seconds;
 
     const totaluptime = `${days}d, ${hours}h, ${minutes}m, ${seconds}s`
-
          interaction.reply({embeds: [
            new MessageEmbed()
            .setTitle('Bot stats')
