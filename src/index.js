@@ -1,7 +1,7 @@
 const DiscordJS = require('discord.js')
 const { Collection } = require('discord.js')
 const { MessageEmbed } = require('discord.js')
-const { token, botId } = require('./config.json')
+const { token, botId, status } = require('./config.json')
 const chalk = require('chalk')
 
 const fs = require('fs')
@@ -23,6 +23,23 @@ const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWi
 commandFiles.forEach((commandFile) => {
 	const command = require(`./commands/${commandFile}`)
 	client.commands.set(command.data.name, command)
+})
+
+client.on('ready', () => {
+    client.channels.cache.get(status).send({
+        embeds: [
+            new MessageEmbed()
+            .setColor('#0xe100ff')
+            .setTimestamp()
+            .addFields([
+                {
+                    name: "**Activity Bot Status**",
+                    value: "Bot is online | <t:" + Math.round((new Date()).getTime() / 1000) + ":f>"
+                }
+            ])
+            
+        ]
+    })
 })
 
 client.on('ready', () => {
