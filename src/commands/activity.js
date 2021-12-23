@@ -10,7 +10,7 @@ module.exports = {
       .setName('activities')
       .setDescription('Start a Discord activity in a channel')
       .addChannelOption(channel=> channel.setName('channel').setDescription('Pick the channel for your activity.').setRequired(true))
-      .addStringOption(act=> act.setName('activity').setDescription('Insert link you want to play.').setRequired(true)
+      .addStringOption(act=> act.setName('activity').setDescription('Pick any activity from the list.').setRequired(true)
       .addChoice('YouTube Together', 'yttogether')
       .addChoice('Poker Night', 'pokernight')
       .addChoice('Betrayal.io', 'betrayal')
@@ -23,10 +23,6 @@ module.exports = {
       .addChoice('Letter Tile', 'lettertile')),
       
       async execute(interaction) {
-
-        var consolelog = {year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'};
-        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        var d = new Date()
 
         const pickedchannel = interaction.options.getChannel('channel')
         const channeltype = pickedchannel.type
