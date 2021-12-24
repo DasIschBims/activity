@@ -21,7 +21,9 @@ Simply type /activities, pick a voice channel and select one of the activities y
     "appId": "botAppIdHere",
     "token": "yourBotTokenHere",
     "botId": "botIdHere",
-    "owner": "yourUserIdHere"
+    "owner": "yourUserIdHere",
+    "status": "channelIdForBotStartMessage"
 }
 ```
+- Run ``npm install`` to install all dependencies from `package.json`.
 - After that's done run ``npm run start`` or ``npm run startshard`` if you need sharding.
