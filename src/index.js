@@ -26,20 +26,25 @@ commandFiles.forEach((commandFile) => {
 })
 
 client.on('ready', () => {
-    client.channels.cache.get(status).send({
-        embeds: [
-            new MessageEmbed()
-            .setColor('#0xe100ff')
-            .setTimestamp()
-            .addFields([
-                {
-                    name: "**Activity Bot Status**",
-                    value: "Bot is online | <t:" + Math.round((new Date()).getTime() / 1000) + ":f>"
-                }
-            ])
-            
-        ]
-    })
+    if (status === "") {
+        return 0
+    } else {
+        client.channels.cache.get(status).send({
+            embeds: [
+                new MessageEmbed()
+                .setColor('#0xe100ff')
+                .setTimestamp()
+                .addFields([
+                    {
+                        name: "**Activity Bot Status**",
+                        value: "Bot is online | <t:" + Math.round((new Date()).getTime() / 1000) + ":f>"
+                    }
+                ])
+                
+            ]
+        })
+    }
+
 })
 
 client.on('ready', () => {
