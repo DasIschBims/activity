@@ -24,6 +24,7 @@ Simply type /activities, pick a voice channel and select one of the activities y
     "owner": "yourUserIdHere",
     "status": "channelIdForBotStartMessage"
     // This sends a message in the mentioned channel when bot is ready.
+    // Leave string empty if not needed
 }
 ```
 - Run ``npm install`` to install all dependencies from `package.json`.
