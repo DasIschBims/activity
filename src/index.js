@@ -44,7 +44,6 @@ client.on('ready', () => {
             ]
         })
     }
-
 })
 
 client.on('ready', () => {
