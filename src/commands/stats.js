@@ -8,19 +8,19 @@ module.exports = {
              .setDescription("Sends stats about the bot."),
   async execute(interaction, client) {
 
-    const uptime = (interaction.client.uptime / 1000)
-    const days = Math.floor(uptime / 86400)
-    var totalhours = Math.floor(days * 24)
-    var hours = Math.floor(uptime / 3600 - totalhours)
-    var totalminutes = Math.floor(hours * 60)
-    var minutes = Math.floor(uptime / 60 - totalminutes)
-    var seconds = Math.floor(uptime % 60)
+    let totalSeconds = (interaction.client.uptime / 1000);
+    let days = Math.floor(totalSeconds / 86400);
+    totalSeconds %= 86400;
+    let hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = Math.floor(totalSeconds % 60);
 
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0"  + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    const totaluptime = `${days}d, ${hours}h, ${minutes}m, ${seconds}s`
+    const totaluptime = `${days} days, ${hours} hours, ${minutes} minutes and ${seconds} seconds`;
 
          interaction.reply({embeds: [
            new MessageEmbed()
